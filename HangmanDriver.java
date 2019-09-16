@@ -11,7 +11,7 @@ import java.lang.StringBuilder;
 public class HangmanDriver
 {
    //This is an array of Strings
-   static String movieList[]={"Star Wars: The Last Jedi","Battleship","Bumblebee","The Matrix","Avatar","Platoon","We Were Soldiers","Doctor Strange","Avengers: Infinity War","Sprited Away","Guardians of the Galaxy","Blade Runner 2049","Patlabor 2","The Towering Inferno","Singing in the Rain"};
+   static String movieList[]={"Star Wars: The Last Jedi", "Bumblebee", "The Matrix", "Avatar", "Doctor Strange", "Avengers: Infinity War", "Sprited Away", "Guardians of the Galaxy", "Blade Runner 2049", "Patlabor 2", "The Towering Inferno"};
    // add more to this list by adding more String Literals se"Battleship","Bumblebee",parated by commas
    /**
     * Entry point of the program
