@@ -5,10 +5,10 @@
 * 9/28/19
 */
 
-import java.util.Scanner;
-import java.lang.StringBuilder;
+import java.util.*;
+import java.lang.*;
 
-public class HangmanDriver
+public class Hangman
 {
    //This is an array of Strings
    static String movieList[]={"Star Wars: The Last Jedi", "Bumblebee", "The Matrix", "Avatar", "Doctor Strange", "Avengers: Infinity War", "Sprited Away", "Guardians of the Galaxy", "Blade Runner 2049", "Patlabor 2", "The Towering Inferno"};
@@ -22,12 +22,12 @@ public class HangmanDriver
 		int count=0;
 		int found=0;
 		int playing=1;
-		String movie=movieList[new Random().nextInt(movieList.length)];  // picks a random element from movieList
-		StringBuilder currentGuess=new StringBuilder(movie); // converts string into a strngbuilder
-		StringBuilder correctGuess=new StringBuilder(movie); // creates a stringbuilder to check currentGuess
+		String movie=movieList[new Random().nextInt(movieList.length)];// picks a random element from movieList
+		StringBuilder currentGuess=new StringBuilder(movie);// converts string into a strngbuilder
+		StringBuilder correctGuess=new StringBuilder(movie);// creates a stringbuilder to check currentGuess
 		Scanner scanner=new Scanner(System.in);
 
-		for(int i=0; i<currentGuess.length(); i++) //Replaces all letters in currentGuess with '*'
+		for(int i=0; i<currentGuess.length(); i++)//Replaces all letters in currentGuess with '*'
 		{
 			if(Character.isLetter(currentGuess.charAt(i)))
 			{
@@ -37,7 +37,7 @@ public class HangmanDriver
 
 		System.out.println(currentGuess);
 
-		while(count<7 && playing==1)
+		while(count<8 && playing==1)
 		{
 			System.out.println("Enter a character: ");
 			String str=scanner.nextLine(); //allows user to enter input
@@ -116,8 +116,8 @@ public class HangmanDriver
 			 	System.out.println("   ____________");
 			 	System.out.println("   |          _|_");
 			 	System.out.println("   |         /   \\");
-			 	System.out.println("   |        |     |");
-			 	System.out.println("   |         \\_ _/");
+			 	System.out.println("   |        		");
+			 	System.out.println("   |        		");
 			 	System.out.println("   |");
 			 	System.out.println("   |");
 			 	System.out.println("   |");
@@ -131,8 +131,8 @@ public class HangmanDriver
 			 	System.out.println("   |         /   \\");
 			 	System.out.println("   |        |     |");
 			 	System.out.println("   |         \\_ _/");
-			 	System.out.println("   |           |");
-			 	System.out.println("   |           |");
+			 	System.out.println("   |           ");
+			 	System.out.println("   |           ");
 			 	System.out.println("   |");
 			 	System.out.println("___|___");
 			 }
@@ -147,10 +147,24 @@ public class HangmanDriver
 			 	System.out.println("   |         \\_ _/");
 			 	System.out.println("   |           |");
 			 	System.out.println("   |           |");
-			 	System.out.println("   |          / \\ ");
-			 	System.out.println("___|___      /   \\");
+			 	System.out.println("   |           ");
+			 	System.out.println("___|___        ");
 			 }
 			 if(count==7) 
+			 {
+			 	// System.out.println(c + " is not a letter");
+			 	System.out.println("Wrong guess, try again");
+			 	System.out.println("   ____________");
+			 	System.out.println("   |          _|_");
+			 	System.out.println("   |         /   \\");
+			 	System.out.println("   |        |     |");
+			 	System.out.println("   |         \\_ _/");
+			 	System.out.println("   |           |");
+			 	System.out.println("   |           |");
+			 	System.out.println("   |          /  ");
+			 	System.out.println("___|___      /   ");
+			 }
+			 if(count==8) 
 			 {
 			 	System.out.println("GAME OVER!");
 			 	System.out.println("   ____________");
