@@ -10,15 +10,18 @@ import java.lang.StringBuilder;
 
 public class HangmanDriver
 {
-	static String movieList[]={"Star Wars: The Last Jedi","Battleship","Bumblebee","The Matrix","Avatar","Platoon","We Were Soldiers","Doctor Strange","Avengers: Infinity War","Sprited Away","Guardians of the Galaxy","Blade Runner 2049","Patlabor 2","The Towering Inferno","Singing in the Rain"};
-	private static String[] phraseListAsterisk = {};
-
+   //This is an array of Strings
+   static String movieList[]={"Star Wars: The Last Jedi","Battleship","Bumblebee","The Matrix","Avatar","Platoon","We Were Soldiers","Doctor Strange","Avengers: Infinity War","Sprited Away","Guardians of the Galaxy","Blade Runner 2049","Patlabor 2","The Towering Inferno","Singing in the Rain"};
+   // add more to this list by adding more String Literals se"Battleship","Bumblebee",parated by commas
+   /**
+    * Entry point of the program
+    * @param args input arguments
+    */
 	public static void main(String[] args)
 	{
 		int count=0;
 		int found=0;
 		int playing=1;
-
 		String movie=movieList[new Random().nextInt(movieList.length)];  // picks a random element from movieList
 		StringBuilder currentGuess=new StringBuilder(movie); // converts string into a strngbuilder
 		StringBuilder correctGuess=new StringBuilder(movie); // creates a stringbuilder to check currentGuess
@@ -173,3 +176,4 @@ public class HangmanDriver
 		}
 	}
 }
+
