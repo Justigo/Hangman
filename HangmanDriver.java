@@ -5,10 +5,17 @@
 * 9/28/19
 */
 
+import java.util.Scanner;
+import java.lang.StringBuilder;
+
 public class HangmanDriver{
 
-  public static void main(String[] args){
-  
-  }
-  
- }
+	private static final String[] phraseList = {};//10
+	private static String[] phraseListAsterisk = {};
+
+	public static void main(String[] args){
+
+
+	}
+ 
+}
