@@ -15,7 +15,7 @@ public class HangmanDriver
    //This is an array of Strings
    private static String movieList[]={"Star Wars: The Last Jedi", "The Matrix", "Avatar", 
    		"Doctor Strange", "Avengers: Infinity War", "Sprited Away", "Guardians of the Galaxy", 
-   		"Willow", "Place beyond the Pines", "The Towering Inferno"};
+   		"Willow", "3921 3913 1 3", "The Towering Inferno"};
 
    /** Entry point of the program */
 	public static void main(String[] args)
@@ -29,7 +29,7 @@ public class HangmanDriver
 
 		for(int i=0; i<currentGuess.length(); i++) //Replaces all letters in currentGuess with '*'
 		{
-			if(Character.isLetter(currentGuess.charAt(i)))
+			if(Character.isLetter(currentGuess.charAt(i)) || Character.isDigit(currentGuess.charAt(i)))
 			{
 				currentGuess.setCharAt(i,'*');
 			}
