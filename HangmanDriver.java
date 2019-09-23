@@ -14,8 +14,8 @@ public class HangmanDriver
 {
    //This is an array of Strings
    private static String movieList[]={"Star Wars: The Last Jedi", "The Matrix", "Avatar", 
-   		"Doctor Strange", "Avengers: Infinity War", "Sprited Away", "Guardians of the Galaxy", 
-   		"Willow", "3921 3913 1 3", "The Towering Inferno"};
+   		"Doctor Strange", "Avengers: Infinity War", "Sprited Away", "Guardians of the Galaxy Volume 2", 
+   		"Willow", "The Towering Inferno"};
 
    /** Entry point of the program */
 	public static void main(String[] args)
@@ -37,12 +37,20 @@ public class HangmanDriver
 		instructionMenu();
 		System.out.println(currentGuess);
 
+		/*
+		Precondition: countError is less than 8
+		Postcondition: runs through game
+		*/
 		while(countErrors < 8){
 
 			System.out.print("\nEnter a character: ");
 			String guess = input.next(); //allows user to enter input
 			char letterGuess = guess.charAt(0); //only allows first character to be checked
 
+			/*
+			Precondition: cheks to see if "MENU" is entered
+			Postcondition: Either prints the menu or runs through game
+			*/
 			if(guess.equalsIgnoreCase("MENU")){
 				instructionMenu();
 				System.out.println(currentGuess);
@@ -75,6 +83,10 @@ public class HangmanDriver
 						currentGuess.setCharAt(i,correctGuess.charAt(i)); //replaces '*' -> correct
 		    		}
 				}
+				/**
+				Precondition: found does not equal 1
+				Post-condition: Prints out how many guesses have been used
+				*/
 				if(found != 1){
 					countErrors++;
 					createHangmanArt(countErrors, correctGuess + "", letterGuess);
@@ -87,7 +99,10 @@ public class HangmanDriver
 				System.out.println("Only a SINGLE letter/number is allowed bozo!\ncurrentGuess");
 			}
 
-			
+			/**
+			Precondition: currentGuess 
+			Post-condition: breaks from loop
+			*/
 			if((currentGuess.substring(0)).equalsIgnoreCase(correctGuess.substring(0))){
 				playing = 0;
 				break; //Win Game;
