@@ -56,7 +56,7 @@ public class HangmanDriver
 				System.out.println(currentGuess);
 
 			}else if(guess.length() > 1){
-				System.out.println("Only a SINGLE letter/number is allowed bozo!\ncurrentGuess");
+				System.out.printf("Only a SINGLE letter/number is allowed bozo!%ncurrentGuess:%n%s%n", currentGuess);
 
 			}else if(usedGuesses.contains(letterGuess)){
 
@@ -96,7 +96,7 @@ public class HangmanDriver
 				System.out.println(currentGuess.toString()); //prints currentGuess
 
 			}else{
-				System.out.println("Only a SINGLE letter/number is allowed bozo!\ncurrentGuess");
+				System.out.printf("Only a SINGLE letter/number is allowed bozo!%ncurrentGuess:%n%s%n", currentGuess);
 			}
 
 			/**
